@@ -14,7 +14,8 @@
     "idf.toolsPath": "/home/xjh/.espressif",
     "files.associations": {
         "stdio.h": "c",
-        "cjson.h": "c"
+        "cjson.h": "c",
+        "led.h": "c"
     },
     "idf.flashType": "UART",
     "idf.port": "/dev/ttyUSB0"
