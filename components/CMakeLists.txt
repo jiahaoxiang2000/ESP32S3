@@ -1,4 +1,5 @@
 set(src_dirs
+            dht11
             iic
             lcd
             led
@@ -6,7 +7,8 @@ set(src_dirs
             uart
             xl9555)
 
-set(include_dirs
+set(include_dirs 
+            dht11
             iic
             lcd
             led
