@@ -6,11 +6,16 @@
 #include "esp_psram.h"
 #include "esp_flash.h"
 #include "led.h"
+#include "uart.h"
 
 void app_main(void)
 {
     esp_err_t ret;
-    ret = nvs_flash_init(); 
+    uint8_t len = 0;
+    uint16_t times = 0;
+    unsigned char data[RX_BUF_SIZE] = "Hello World!\r\n";
+
+    ret = nvs_flash_init();
     if (ret == ESP_ERR_NVS_NO_FREE_PAGES || ret == ESP_ERR_NVS_NEW_VERSION_FOUND)
     {
         ESP_ERROR_CHECK(nvs_flash_erase());
@@ -18,12 +23,12 @@ void app_main(void)
     }
 
     led_init();
-    printf("led init\r\n");
+    usart_init(115200);
     while (1)
     {
-        LED(1);
+        uart_write_bytes(USART_UX, (const char *)data, strlen((const char *)data));
+        LED_TOGGLE();
         vTaskDelay(1000);
-        LED(0);
-        vTaskDelay(1000);
+        
     }
 }

@@ -15,7 +15,8 @@
     "files.associations": {
         "stdio.h": "c",
         "cjson.h": "c",
-        "led.h": "c"
+        "led.h": "c",
+        "uart.h": "c"
     },
     "idf.flashType": "UART",
     "idf.port": "/dev/ttyUSB1"
