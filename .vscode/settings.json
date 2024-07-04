@@ -16,8 +16,9 @@
         "stdio.h": "c",
         "cjson.h": "c",
         "led.h": "c",
-        "uart.h": "c"
+        "uart.h": "c",
+        "cstddef": "c"
     },
     "idf.flashType": "UART",
-    "idf.port": "/dev/ttyUSB1"
+    "idf.port": "/dev/ttyUSB0"
 }
