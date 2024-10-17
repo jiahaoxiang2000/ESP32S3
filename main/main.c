@@ -150,7 +150,7 @@ void app_main(void)
     {
         while (1)
         {
-            lcd_show_string(30, 50, 200, 16, 16, "DHT11 Error", RED);
+            lcd_show_string(30, 50, 200, 16, 16, "DHT11 Error ..", RED);
             vTaskDelay(200);
             lcd_fill(30, 50, 239, 130 + 16, WHITE);
             vTaskDelay(200);
